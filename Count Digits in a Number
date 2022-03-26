@@ -1,0 +1,18 @@
+import java.util.*;
+  
+  public class Main{
+  
+  public static void main(String[] args) {
+    // write your code here
+    Scanner Scn =new Scanner (System.in); 
+    
+    int n=Scn.nextInt();
+    int count=0;
+
+    for (;n>0; n=n/10)
+    {
+           
+             count=count+1;
+    } System.out.println(count);
+   }
+  }
