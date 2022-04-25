@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+
+public class Main{
+  
+public static void main(String[] args) throws Exception {
+    Scanner scn=new Scanner(System.in);
+    int n=scn.nextInt();
+    int arr[]=new int[n];
+    for (int i=0;i<n;i++){
+      arr[i]=scn.nextInt();
+
+      //input  for  array
+
+    }
+    int k=scn.nextInt(); ///input from where you mwant to rotate
+rotate(arr,k); // calling rotate function
+    display(arr); /// display the array
+
+ }
+  
+  public static void rotate(int[] a, int k){
+  k=k%a.length;
+  if(k<0)
+  k=k+a.length;
+  reverse(a,a.length-k,a.length-1);
+  reverse(a,0,a.length-k-1);
+  reverse(a,0,a.length-1);
+  }
+
+    public static void reverse(int[] a, int left,int right){
+    while(left<right)
+    {
+      int temp=a[left];
+      a[left]=a[right];
+      a[right]=temp;
+      left++;
+      right--;
+
+    }
+    
+    // write your code here
+  }
+  public static void display(int arr[]){
+    for(int v:arr){  /// for each loop where  you quickly 
+                         //traverse the  array
+      System.out.print(v+" ");
+    }
+  }
+
+
+}
