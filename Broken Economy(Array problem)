@@ -1,0 +1,46 @@
+import java.util.*;
+import java.io.*;
+class Main {
+	public static void main(String args[]) {
+		Scanner scn=new Scanner(System.in);
+		int n =scn.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=scn.nextInt();
+		}
+		int ele=scn.nextInt();
+		
+		
+		
+		// Your code goes here
+	
+	
+		int left=0;
+		int right=arr.length-1;
+        int  floor=-1;
+        int ciel=-1;
+		while(left<=right){
+			int mid =(left+right)/2;
+			if(ele==arr[mid]){
+				floor= mid;
+            ciel=mid;
+			}
+			else if(ele>arr[mid]){
+				left=mid+1;
+                floor=mid;
+			}
+			else if(ele<arr[mid]){
+				right=mid-1;
+                ciel=mid;
+			}
+			
+			
+
+		}System.out.println(arr[ciel]);
+		System.out.println(arr[floor]);
+		 
+	
+	
+	}
+    
+}
