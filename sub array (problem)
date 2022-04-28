@@ -1,0 +1,28 @@
+import java.util.*;
+import java.io.*;
+class Main {
+	public static void main(String args[]) {
+		Scanner scn=new Scanner(System.in);
+		int n =scn.nextInt();
+		int arr[]=new int[n];
+		for(int i=0;i<n;i++){
+			arr[i]=scn.nextInt();
+		}
+        
+        sub(arr);
+       }
+ public static void sub(int sub[])
+ {
+     for(int sp=0;sp<sub.length;sp++)
+     {
+         for(int end=sp;end<sub.length;end++){
+             for  ( int  prin=sp;prin<=end;prin++){
+                 System.out.print(sub[prin]+"\t");
+             }
+             System.out.println();
+         }
+     }
+ 
+ }       
+
+}
