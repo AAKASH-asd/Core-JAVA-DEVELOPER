@@ -1,0 +1,36 @@
+package com.aakash1212;
+
+import java.util.Scanner;
+
+public class Main {
+
+    public static void main(String[] args) {
+        Scanner scn=new Scanner(System.in);
+        int nr=scn.nextInt();
+        int nc= scn.nextInt();
+        int mat[][]=new int[nr][nc];
+        inp(mat,scn);
+        disp(mat);
+    }
+
+    public static void inp(int mat[][], Scanner scn)
+
+    {
+        for (int i=0;i< mat.length;i++){
+            for (int j=0;j< mat[0].length;j++){
+
+
+                mat[i][j]=scn.nextInt();
+            }
+        }
+    }
+    public  static void  disp(int mat[][]){
+        for (int i=0;i< mat.length;i++){
+            for (int j=0;j< mat[0].length;j++){
+
+                System.out.print(mat[i][j]+"\t");
+            }
+            System.out.println();
+        }
+    }
+}
