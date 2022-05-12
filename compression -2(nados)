@@ -1,0 +1,63 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+public static String compression1(String str){
+        // write your code here
+        String str1="";
+        str1=str1+str.charAt(0) ;
+        int c=str.length()-1;
+        for(int i=0;i<c;i++){
+            if(str.charAt(i)!=str.charAt(i+1))
+            {
+                str1=str1+str.charAt(i+1); 
+            }
+
+        }
+       // str1=str1+str2.charAt(str2.length()-1);
+        return str1;
+    }
+	public static String compression2(String str){
+		// write your code here
+		  String str1= "";
+        str1=str1+str.charAt(0) ;
+        int c=str.length()-1;
+        int count =1;
+        for(int i=0;i<c;i++){
+            char  current =str.charAt(i);
+            char next =str.charAt(i+1);
+            if(current==next){  //if current == next
+                //then continue
+                count=count+1;
+                continue;
+            }
+            else
+//else  print next  because  initally first we concatenate the first member  of string
+//            to the  resuultant string  then therefore  we want to add next
+//            elements,because  we stored the current  value  initially
+
+            {
+if (count>1) {
+    str1 = str1+count;
+
+}
+str1=str1+next;
+count =1;
+            }
+        }
+        if(count>1){
+
+                    str1=str1+count;
+        }
+//        str1=str1+str2.charAt(str2.length()-2)+str2.charAt(str2.length()-1);
+
+        return str1;
+	}
+	public static void main(String[] args) {
+		Scanner scn = new Scanner(System.in);
+		String str = scn.next();
+		System.out.println(compression1(str));
+		System.out.println(compression2(str));
+	}
+
+}
