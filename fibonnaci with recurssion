@@ -1,0 +1,19 @@
+
+import java.util.Scanner;
+public class Main {
+
+public static void main(String[] args) throws Exception {
+        // write your code here
+        Scanner scn=new Scanner(System.in);
+        int n=scn.nextInt();
+       int a= fibonacci(n);
+    System.out.println(a);
+        }
+
+public static int  fibonacci(int n){
+    if(n==0) return 0;
+    if(n==1) return 1;
+    else  return fibonacci(n-1)+fibonacci(n-2);
+        }
+
+        }
