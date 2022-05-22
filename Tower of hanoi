@@ -1,0 +1,34 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+     Scanner scn=new Scanner (System.in);
+     int n=scn.nextInt();
+     int starting=scn.nextInt();
+     int destination=scn.nextInt();
+     int helper=scn.nextInt();
+     
+    toh(n,starting,destination,helper);
+     
+        // write your code here
+    }
+
+    public static void toh(int n, int src, int des, int hel){
+        if(n==1){
+         System.out.println(n+"["+src+" -> "+des+"]");
+         return;
+        }
+        
+        toh(n-1,src,hel,des);
+        System.out.println(n+"["+src+" -> "+des+"]");
+        toh(n-1,hel,des,src);
+        
+
+
+        
+    }
+   
+
+}
