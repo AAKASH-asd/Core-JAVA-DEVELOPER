@@ -1,0 +1,28 @@
+
+import java.util.*;
+
+public class Main {
+
+    public static void main(String[] args) throws Exception {
+        Scanner scn =new Scanner(System.in);
+        int n=scn.nextInt();
+        int arr[]=new int [n];
+        for(int i=0;i<n;i++){
+            arr[i]=scn.nextInt();
+        }
+        int a=n-1;
+        displayArr(arr,0,a);
+        // write your code here
+    }
+
+    public static void displayArr(int arr[], int lower, int  upper){
+        if(lower==upper) {
+            System.out.println(arr[lower]);
+            return;
+        }
+        System.out.println(arr[lower]);
+        displayArr( arr,lower+1,upper);
+
+    }
+
+      }
